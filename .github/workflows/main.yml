@@ -69,5 +69,13 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ steps.meta.outputs.tags }}
+          tags: ${{ steps.get_app_id.outputs.APP_VERSION }}
           labels: microservice
+
+      - name: Release ${{ steps.get_app_id.outputs.APP_VERSION }}
+        uses: "marvinpinto/action-automatic-releases@latest"
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          automatic_release_tag: v${{ steps.get_app_id.outputs.APP_VERSION  }}
+          prerelease: true
+          title: Release ${{ steps.get_app_id.outputs.APP_VERSION }}
