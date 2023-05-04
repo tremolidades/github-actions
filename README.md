@@ -5,13 +5,9 @@ Deploy the image for Base API with openAPI Docs using FastAPI ;)
 
 ## Workflows
 
-### dev.yml
-- Inicio: Automático (Push branch developer)
-- Detalle: Ejecuta tareas relacionadas de validación y pruebas unitarias de la aplicación.
-
 ### main.yml
-- Inicio: Automático (Push branch testing)
-- Detalle: Ejecuta un tareas relacionadas a validación, pruebas unitarias y genera el empaquetado pre-release para su distribución.
+- Start: Automatic (Push branch testing)
+- Detail: Executes tasks related to validation, unit tests, build, push docker image and generates the pre-release packaging for distribution.
 
 
 # Microservice Base Folders
