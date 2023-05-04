@@ -68,5 +68,5 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ steps.get_app_id.outputs.APP_VERSION }}
+          tags: ${{ steps.meta.outputs.tags }}
           labels: microservice
