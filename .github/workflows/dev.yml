@@ -40,7 +40,7 @@ jobs:
       - name: Get APP version
         id: get_app_id
         run: echo "::set-output name=APP_VERSION::$(cat app/core/config.py | grep 'release:' | awk '{print $4}' | sed 's/\"//g')"
-      
+
       - run: echo ${{ steps.get_app_id.outputs.APP_VERSION }}
 
       - name: Login to GitHub Container Registry
