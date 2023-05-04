@@ -3,7 +3,8 @@ name: Build and Test
 on: workflow_dispatch
 
 env:
-  IMAGE_NAME: "MicroserviceFastAPI"
+#  The name must be lowercase
+  IMAGE_NAME: "microservice_fast_api"
 
 jobs:
   environment-testing:
