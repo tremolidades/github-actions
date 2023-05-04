@@ -35,8 +35,9 @@ jobs:
     outputs:
       APP_VERSION: ${{ steps.get_app_id.outputs.APP_VERSION }}
     permissions:
-      contents: read
+      contents: write
       packages: write
+      deployments: write
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -52,7 +53,7 @@ jobs:
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
-          password: ${{ secrets.GHCR }}
+          password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Extract metadata (tags, labels) for Docker
         id: meta
