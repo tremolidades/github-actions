@@ -49,11 +49,11 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-#
-#      - name: Build and push Docker image
-#        uses: docker/build-push-action@v2
-#        with:
-#          context: .
-#          push: true
-#          tags: ${{ secrets.DOCKER_REGISTRY_URL }}/${{ env.IMAGE_NAME }}:${{ steps.get_app_id.outputs.APP_VERSION }}-dev
-#          labels: microservice
+
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v4
+        with:
+          context: .
+          push: true
+          tags: ghcr.io/${{ env.IMAGE_NAME }}:${{ steps.get_app_id.outputs.APP_VERSION }}-dev
+          labels: microservice
