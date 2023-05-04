@@ -2,7 +2,9 @@ name: Build and Test
 
 # on: workflow_dispatch
 on:
-  push: main
+  push:
+    branches:
+      - main
 
 env:
 #  The name must be lowercase
