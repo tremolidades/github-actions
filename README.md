@@ -1,7 +1,7 @@
 # Base Project - FastAPI
 
 ## Goal
-Deploy the image for Base API with openAPI Docs using FastAPI ;)
+Deploy the image for Base API using FastAPI with openAPI Docs, basics testing and coverage in GitHub Container Registry
 
 ## Workflows
 
