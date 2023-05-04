@@ -1,0 +1,7 @@
+fastapi==0.70.0
+uvicorn==0.15.0
+splunk-sdk==1.6.18
+pydantic==1.8.2
+pytest==6.2.5
+pytest-cov==3.0.0
+requests==2.26.0
